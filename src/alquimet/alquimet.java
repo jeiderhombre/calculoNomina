@@ -27,13 +27,14 @@ public class alquimet {
 		
 		do {
 		System.out.print("cuantos enpleados vas a calcular el salario\n\ncuantos: ");
-		lerr.next();
+		//lerr.next();
 		cant=lerr.nextInt();
+		
 		String[] nom = new String[cant];
 		double[] sala = new double[cant], salto=new double[cant];
 		double[] ausi=new double[2];
 		int[] strac=new int[cant];
-		for(int i=0; i+1 >cant; i++) {
+		for(int i=0; i <cant; i++) {
 			System.out.print("ingresa al trabajador #"+(i+1)+": ");
 			nom[i]=lerr.next();
 			System.out.print("ingresa el salario de "+nom[i]+": ");
@@ -42,12 +43,14 @@ public class alquimet {
 			strac[i]=lerr.nextInt();
 			switch(strac[i]) {
 				case 1:case 2: case 3:
-					ausi[0]=sala[i]*0.8;
-					ausi[1]=sala[i]*0.5;
+					ausi[0]=sala[i]*0.08;
+					System.out.print(ausi[0]);
+					ausi[1]=sala[i]*0.05;
+					System.out.print(ausi[1]);
 				salto[i]= (sala[i]-ausi[0])+(106000+ausi[1]);
 				break;case 4: case 5:
-					ausi[0]=sala[i]*0.8;
-					ausi[1]=sala[i]*0.3;
+					ausi[0]=sala[i]*0.08;
+					ausi[1]=sala[i]*0.03;
 				salto[i]= (sala[i]-ausi[0])+(106000+ausi[1]);
 				break;default:
 					ausi[0]=sala[i]*0.8;
@@ -55,7 +58,7 @@ public class alquimet {
 			}
 						
 		}
-		for(int i=0; i+1 > cant; i++) {
+		for(int i=0; i < cant; i++) {
 			System.out.println("el salario de "+nom[i]+" es= "+salto[i]);
 		}
 		System.out.print("vas a sacar nomina para mas trabajadores/ si=y o no=n: ");
