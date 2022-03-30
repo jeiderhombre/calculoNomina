@@ -53,7 +53,7 @@ public class alquimet {
 					ausi[1]=sala[i]*0.03;
 				salto[i]= (sala[i]-ausi[0])+(106000+ausi[1]);
 				break;default:
-					ausi[0]=sala[i]*0.8;
+					ausi[0]=sala[i]*0.08;
 				salto[i]= (sala[i]-ausi[0])+106000;
 			}
 						
